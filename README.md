@@ -296,16 +296,15 @@ Select from available Claude Code tools:
 │       ├── requirements.md   # User stories
 │       ├── design.md        # Technical design
 │       └── tasks.md         # Implementation checklist
-├── personas/                 # Agent definitions
-│   ├── strategic-planner.md
-│   ├── task-executor.md
-│   ├── code-reviewer.md
-│   ├── steering-architect.md
-│   ├── debugger.md
-│   ├── data-scientist.md
-│   ├── product-manager.md
-│   └── llms-txt-generator.md
-└── draft/                    # Original agent drafts (Chinese)
+└── personas/                 # Agent definitions
+    ├── strategic-planner.md
+    ├── task-executor.md
+    ├── code-reviewer.md
+    ├── steering-architect.md
+    ├── debugger.md
+    ├── data-scientist.md
+    ├── product-manager.md
+    └── llms-txt-generator.md
 ```
 
 ### File Purposes
