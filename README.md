@@ -2,6 +2,15 @@
 
 A template and reference implementation for creating specialized AI agents in Claude Code. This framework demonstrates best practices for building collaborative AI agents that enhance software development workflows.
 
+## TL;DR
+
+**Spec-driven development for AI agents** - Inspired by [AWS Kiro and win4r's methodology](https://www.aivi.fyi/aiagents/introduce-Sub-agents). Give AI precise context through specifications for exceptional results.
+
+**Quick Start:** `cp personas/*.md /Users/<username>/.claude/agents/` then:
+```bash
+@product-manager create PRD → @strategic-planner design → @task-executor implement → @code-reviewer verify
+```
+
 ## What is This?
 
 This is a **template project** that serves as:
@@ -11,6 +20,21 @@ This is a **template project** that serves as:
 - 🚀 **Quick Start Template**: Bootstrap your own agent-powered workflows
 
 **Note**: This is not a standalone application, but rather a collection of agent definitions and patterns designed to be integrated into Claude Code for enhanced development capabilities.
+
+## Core Philosophy: Spec-Driven Development
+
+This project embodies a **spec-driven development** approach, empowering Claude Code to deliver exceptional results through precise, contextual guidance. Inspired by AWS Kiro and [win4r's AISuperDomain](https://github.com/win4r/AISuperDomain) methodology (detailed in their blog post: [Introduce Sub-agents](https://www.aivi.fyi/aiagents/introduce-Sub-agents)), our framework transforms how AI agents collaborate on software development.
+
+### The Power of Precise Context
+
+The spec-driven development workflow focuses on how to **precisely and concisely provide context** to agents for optimal task execution. By creating detailed specifications before implementation, we enable:
+
+- **Clear Boundaries**: Each agent knows exactly what to build and how
+- **Reduced Ambiguity**: Specifications eliminate guesswork and interpretation errors
+- **Systematic Progress**: Tasks are broken down into atomic, verifiable steps
+- **Quality Assurance**: Every implementation follows pre-defined acceptance criteria
+
+This approach ensures that AI agents work with the same clarity and precision as experienced human developers following well-defined specifications.
 
 ## How to Use This Framework
 
@@ -31,7 +55,7 @@ This is a **template project** that serves as:
 
 ## Overview
 
-The Claude Code Agent Framework enables systematic, high-quality software development through specialized AI agents. Each agent has a specific role, expertise, and set of tools optimized for their domain.
+The Claude Code Agent Framework enables **systematic, spec-driven software development** through specialized AI agents. By providing precise context through detailed specifications, each agent operates with clarity and purpose - transforming vague requirements into well-executed implementations. Each agent has a specific role, expertise, and set of tools optimized for their domain, following the principle that **clear specifications lead to exceptional results**.
 
 ## Core Agents
 
@@ -202,19 +226,27 @@ Claude Code recognizes agents through the `@agent-name` syntax. When you referen
 ### Step 2: Installing Agents
 There are several ways to add agents to your Claude Code workflow:
 
-#### Option A: Direct Reference
+#### Option A: Quick Import (Recommended)
+The fastest way to import all personas into Claude Code:
+```bash
+# Copy all personas to your Claude Code agents directory
+cp personas/*.md /Users/<username>/.claude/agents/
+```
+Once copied, agents are immediately available in all your Claude Code sessions using the `@agent-name` syntax.
+
+#### Option B: Direct Reference
 Simply copy the agent definition content and reference it in your conversation:
 ```
 Please act as @strategic-planner and help me design a payment system
 ```
 
-#### Option B: Project Integration
+#### Option C: Project Integration
 1. Copy agent definitions to your project
 2. Create a `/agents` or `/personas` directory
 3. Reference agents in your CLAUDE.md file
 4. Use agents throughout development
 
-#### Option C: Global Configuration
+#### Option D: Global Configuration
 Add frequently used agents to your global Claude configuration:
 1. Access Claude Code settings
 2. Add agent definitions to your workspace
@@ -288,15 +320,15 @@ Select from available Claude Code tools:
 ├── README.md                  # This file
 ├── CLAUDE.md                  # Claude Code specific instructions
 ├── .docs/                     # Global project context
-│   ├── product.md            # Vision and goals
-│   ├── tech.md              # Technology stack
-│   └── structure.md         # Conventions
-├── specs/                    # Feature specifications
+│   ├── product.md             # Vision and goals
+│   ├── tech.md                # Technology stack
+│   └── structure.md           # Conventions
+├── specs/                     # Feature specifications
 │   └── <feature-name>/
-│       ├── requirements.md   # User stories
-│       ├── design.md        # Technical design
-│       └── tasks.md         # Implementation checklist
-└── personas/                 # Agent definitions
+│       ├── requirements.md    # User stories
+│       ├── design.md          # Technical design
+│       └── tasks.md           # Implementation checklist
+└── personas/                  # Agent definitions
     ├── strategic-planner.md
     ├── task-executor.md
     ├── code-reviewer.md
@@ -501,31 +533,28 @@ echo "# Project-specific Claude Code instructions" > CLAUDE.md
 
 ## Advanced Usage
 
-### Custom Workflows
-Combine agents for specific needs:
+### Spec-Driven Development Flow
+
+To start a spec-driven development flow that leverages the full power of precise context:
+
 ```bash
-# Data-driven feature planning
-@data-scientist analyze user behavior patterns
-@product-manager create PRD based on insights
-@strategic-planner design data-driven features
+# Product defines requirements
+@product-manager create PRD for checkout optimization
+
+# Plan technical approach
+@strategic-planner design new checkout flow
+
+# Implement in stages
+@task-executor implement checkout UI updates
+@task-executor add payment processing
+@task-executor integrate shipping calculator
+
+# Ensure quality
+@code-reviewer audit security measures
+@debugger verify payment edge cases
 ```
 
-### Parallel Execution
-Run multiple agents concurrently:
-```bash
-# While implementing:
-@task-executor work on frontend tasks
-@data-scientist prepare analytics queries
-@product-manager refine requirements
-```
-
-### Continuous Improvement
-```bash
-# Regular maintenance:
-@code-reviewer audit codebase weekly
-@steering-architect update docs monthly
-@data-scientist track metrics daily
-```
+This workflow demonstrates how each agent receives clear, contextual instructions that enable them to perform their specialized tasks with precision and efficiency.
 
 ## Examples and Use Cases
 
