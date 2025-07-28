@@ -4,7 +4,7 @@ A template and reference implementation for creating specialized AI agents in Cl
 
 ## TL;DR
 
-**Spec-driven development for AI agents** - Inspired by [AWS Kiro and win4r's methodology](https://www.aivi.fyi/aiagents/introduce-Sub-agents). Give AI precise context through specifications for exceptional results.
+**Spec-driven development for AI agents** - Inspired by AWS Kiro's spec-driven development. Give AI precise context through specifications for exceptional results.
 
 **Quick Start:** `cp personas/*.md /Users/<username>/.claude/agents/` then:
 ```bash
@@ -23,7 +23,7 @@ This is a **template project** that serves as:
 
 ## Core Philosophy: Spec-Driven Development
 
-This project embodies a **spec-driven development** approach, empowering Claude Code to deliver exceptional results through precise, contextual guidance. Inspired by AWS Kiro and [win4r's AISuperDomain](https://github.com/win4r/AISuperDomain) methodology (detailed in their blog post: [Introduce Sub-agents](https://www.aivi.fyi/aiagents/introduce-Sub-agents)), our framework transforms how AI agents collaborate on software development.
+This project embodies a **spec-driven development** approach, empowering Claude Code to deliver exceptional results through precise, contextual guidance. Inspired by [AWS Kiro](https://kiro.dev/) and [win4r's AISuperDomain](https://github.com/win4r/AISuperDomain) methodology (detailed in their blog post: [Introduce Sub-agents](https://www.aivi.fyi/aiagents/introduce-Sub-agents)), our framework transforms how AI agents collaborate on software development.
 
 ### The Power of Precise Context
 
